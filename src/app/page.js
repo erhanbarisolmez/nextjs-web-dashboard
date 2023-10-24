@@ -1,14 +1,8 @@
 'use client'
 import { Box } from "@mui/material";
-import { useRouter } from 'next/navigation';
-import LoginPage from "./login/page";
 
 export default function Page() {
-  const router = useRouter();
 
-  const handleGoToSettings = () => {
-    router.push('/');
-  }
   return (
     <>
 
@@ -19,7 +13,7 @@ export default function Page() {
       height: "100vh"
     }}>
 
-    <LoginPage />
+
     </Box>
     </>
   )
