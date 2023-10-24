@@ -40,7 +40,8 @@ export default function LoginPage() {
            {/* Content */}
           <Box sx={{
             display:"flex",
-            flexDirection:'column'
+            flexDirection:'column',
+           
           }}> 
           {/* Header */}
           <Box sx={{
@@ -76,6 +77,7 @@ export default function LoginPage() {
         {/* Divider*/}
                <Box sx={{
                 mt:5,
+                
                }}>
                <Divider orientation="horizontal" flexItem >
                    <Typography variant="caption">Or with Email</Typography>
@@ -84,15 +86,19 @@ export default function LoginPage() {
 
         {/* Text Field */}
             <Box sx={{
-              mt:2
+              display:'flex',
+              flexDirection:'column',
+              mt:2,
+              justifyContent:'center',
+              alignItems:'center'
             }}>
             <TextField id="outlined-basic" label="Email" variant="outlined"  sx={{
-              width:'100%',
+              width:'80%',
               backgroundColor:'white',
         
             }} />
            <TextField id="outlined-basic" label="Password" variant="outlined"  sx={{
-              width:'100%',
+              width:'80%',
               backgroundColor:'white',
               mt:2
         
@@ -100,8 +106,12 @@ export default function LoginPage() {
             </Box>
              {/* Forget Password */}
          <Box sx={{
+          display:'flex',
           mt:2,
           textAlign:"right",
+          justifyContent:'center',
+          alignContent:'center',
+          alignItems:'center'
          }}>
         <Link href="/">
           <Typography variant="subtitle2">
@@ -112,11 +122,15 @@ export default function LoginPage() {
          {/* Sign In Button */}
          <Box
           sx={{
-            mt:4
+            display:'flex',
+            mt:4,
+            justifyContent:'center',
+            alignContent:'center',
+            alignItems:'center'
           }}
          >
           <Button variant="contained" sx={{
-            width:'100%'
+            width:'80%',
           }} >
               Sign In
             </Button>
