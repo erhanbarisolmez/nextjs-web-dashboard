@@ -1,9 +1,8 @@
+
 import { Box, Grid } from '@mui/material'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import LeftContent from './login/components/LeftContent'
-import RightContent from './login/components/RightContent'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,8 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <>
-    
-      <Box>
+    <html>
+      <body>
       <Grid container>
       <Box
        sx={{
@@ -28,24 +27,16 @@ export default function RootLayout({
         gridTemplateColumns:'repeat(1,1fr)',
         width:"1",
         height:'100vh',
-        backgroundColor:'gray',
+        backgroundColor:'white',
         justifyContent:'center'
        }}
       >
-      {/* Left Content */}
-       <LeftContent />
-       {/* Right Content */}
-       
-          <RightContent />
-        </Box>
+      {children}
+      </Box>
       </Grid>
+      </body>
+    </html>
 
-
-
-     </Box>
-   
-   
-    
     </>
 
   )

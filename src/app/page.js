@@ -1,20 +1,11 @@
 'use client'
-import { Box } from "@mui/material";
+import LoginPage from "./[login]/page";
 
 export default function Page() {
 
   return (
     <>
-
-       <Box sx={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "100vh"
-    }}>
-
-
-    </Box>
+    <LoginPage />
     </>
   )
 }
