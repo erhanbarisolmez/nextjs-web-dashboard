@@ -9,7 +9,7 @@ interface LayoutProps {
 }
 
 export default function LoginLayout({ children}: LayoutProps) {
-  const [showChild, setShowChild] = useState(false)
+  const [showChild, setShowChild] = useState(false);
 
   useEffect(() => {
     setShowChild(true)

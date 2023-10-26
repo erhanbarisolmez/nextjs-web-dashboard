@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <>
+ 
     <html>
       <body>
       <Grid container>
@@ -27,8 +27,8 @@ export default function RootLayout({
         gridTemplateColumns:'repeat(1,1fr)',
         width:"1",
         height:'100vh',
-        backgroundColor:'white',
-        justifyContent:'center'
+        backgroundColor:'black',
+        justifyContent:'center',
        }}
       >
       {children}
@@ -36,8 +36,6 @@ export default function RootLayout({
       </Grid>
       </body>
     </html>
-
-    </>
 
   )
 }

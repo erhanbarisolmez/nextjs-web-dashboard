@@ -1,16 +1,27 @@
+'use client'
 import CustomButton from '@/components/CustomButton';
+import CustomLink from '@/components/CustomLink';
 import CustomTextfield from '@/components/CustomTextfield';
 import DividerWith from '@/components/DividerWith';
-import ForgotPassword from '@/components/ForgotPassword';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import IfNot from '@/components/IfNot';
 import SignInWithButton from '@/components/SignInWithButton';
-import { Box, Typography } from "@mui/material";
-import Link from "next/link";
+import { Box, Link } from "@mui/material";
+import LoginLayout from "./layout";
+export default function LoginPage() {
 
-export default function SignInContent() {
+  function handleClick(): void {
+    
+  }
+
   return (
     <>
+  
+   <LoginLayout>
+    {/* Login Component */}
+
+
+
         {/* Content */}
             <Box sx={{
             display:"grid",
@@ -30,7 +41,7 @@ export default function SignInContent() {
                <DividerWith text={'Or with Email'} />
         </Box>
 
-        {/* EMAIL&PASSWORD Text Field */}
+        {/* CustomTextfield EMAIL&PASSWORD */}
             <Box sx={{
               display:'flex',
               flexDirection:'column',
@@ -40,7 +51,7 @@ export default function SignInContent() {
             <CustomTextfield label={'Email'} variant={'outlined'} id={''} type={'email'} autoComplete={'true'}  />
             <CustomTextfield label={'Password'} variant={'outlined'} id={''} type={'password'} autoComplete={'true'}  />     
             </Box>
-       {/* Forgot Password */}
+       {/* CustomLink Component Forgot Password */}
          <Box sx={{
           display:'flex',
           mt:1,
@@ -49,9 +60,9 @@ export default function SignInContent() {
           alignContent:'center',
           alignItems:'center'
          }}>
-          <ForgotPassword />
+          <CustomLink text={''} link={'/login/password-reset'} variant='subtitle2' linkText='Forgot Password?' />
          </Box>
-         {/* Sign In Button */}
+         {/* CustomButton Components Sign In Button */}
          <Box
           sx={{
             display:'flex',
@@ -61,38 +72,32 @@ export default function SignInContent() {
             alignItems:'center'
           }}
          >
-          <CustomButton buttonTitle={'Sign In'} />
+          <Link href='/dashboard'>
+          <CustomButton buttonTitle={'Sign In'} onClick={handleClick}  />
+          </Link>
          </Box>
-          {/* If Not Components  */}
+          {/* CustomLink Components SignUp */}
           <Box
           sx={{
             display:'flex',
             mt:3,
             justifyContent:'center',
           }}>
-            {/* <Typography variant="subtitle2">
-            Not a member yet? <Link href={"/login/signup"} >
-                <b>Sign Up</b>
-               </Link>
-            </Typography> */}
-        <IfNot text={'Not a member yet?'} variant={'subtitle2'} link={'/login/signup'} />
 
+        <CustomLink text={'Not a member yet?'} variant={'subtitle2'} link={'/login/signup'} boldLinkText='Sign Up' />
+        
           </Box>
          {/* Footer */}
-         <Box sx={{
-          display:'flex',
-          pt:5,
-          justifyContent:'center',
-         }}>
-        <Typography variant='caption'>
-        <b><Link href={"/"}> TERMS  |</Link>
-        <Link href={"/"}> PLANS  |</Link>
-        <Link href={"/"}> CONTACT US</Link></b>
-        </Typography>
-        
-         </Box>
+          <Footer />
        </Box>
    
+
+        
+   </LoginLayout>
+
+  
+          
     </>
+
   )
 }
