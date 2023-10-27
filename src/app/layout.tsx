@@ -31,7 +31,7 @@ export default function RootLayout({
         justifyContent:'center',
        }}
       >
-      {children}
+      <main>{children}</main>
       </Box>
       </Grid>
       </body>

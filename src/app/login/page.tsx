@@ -20,8 +20,6 @@ export default function LoginPage() {
    <LoginLayout>
     {/* Login Component */}
 
-
-
         {/* Content */}
             <Box sx={{
             display:"grid",
@@ -68,11 +66,10 @@ export default function LoginPage() {
             display:'flex',
             mt:2,
             justifyContent:'center',
-            alignContent:'center',
-            alignItems:'center'
+        
           }}
          >
-          <Link href='/dashboard'>
+          <Link href='/dashboard' width={'100%'}>
           <CustomButton buttonTitle={'Sign In'} onClick={handleClick}  />
           </Link>
          </Box>

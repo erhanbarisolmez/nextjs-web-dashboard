@@ -1,6 +1,8 @@
+'use client'
 import AppleIcon from '@mui/icons-material/Apple';
 import GoogleIcon from '@mui/icons-material/Google';
 import { Box, Button } from '@mui/material';
+import Link from 'next/link';
 interface SignInWithButtonProps{
   variant?: "text" | "outlined" | "contained";
   color?: "inherit" | "primary" | "secondary" | "success" | "error" | "info" | "warning";
@@ -26,10 +28,15 @@ export default function SignInWithButton(props: SignInWithButtonProps) {
         Sign in with google
      
       </Button>
+
+      <Link href={'/login/phone'} >
       <Button variant={variant}  color={color} startIcon={<AppleIcon />} size={size}  sx={{ ml: { xs: 0, md: 2 }, mt: { xs: 2, md: 0 } }}>
+      
         Sign in with Apple
-    
+       
       </Button>
+      </Link>
+   
     </Box>
   )
 }
