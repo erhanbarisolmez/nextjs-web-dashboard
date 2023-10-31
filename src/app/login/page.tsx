@@ -7,16 +7,26 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import SignInWithButton from '@/components/SignInWithButton';
 import { Box, Link } from "@mui/material";
+import { useEffect, useState } from 'react';
 import LoginLayout from "./layout";
+
+
 export default function LoginPage() {
+  const [showChild, setShowChild] = useState(false);
+  useEffect(() => {
+    setShowChild(true)
+  }, [])
+
+  if (!showChild) {
+    return null
+  }
 
   function handleClick(): void {
     
   }
 
   return (
-    <div>
-
+    <>
    <LoginLayout>
     {/* Login Component */}
 
@@ -92,9 +102,6 @@ export default function LoginPage() {
         
    </LoginLayout>
 
-  
-          
-    </div>
-
+   </>
   )
 }

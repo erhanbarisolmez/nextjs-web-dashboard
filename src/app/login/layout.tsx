@@ -1,5 +1,6 @@
 'use client'
 import { Box, Grid } from "@mui/material";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import React, { useEffect, useState } from "react";
 import LeftContent from "./components/LeftContent";
 
@@ -58,7 +59,9 @@ export default function LoginLayout({ children}: LayoutProps) {
           }}
         >
    
-          {children}
+   <GoogleOAuthProvider clientId="604456811509-ivvuuq5qcn3h0elfhf2lijqd6bupoemv.apps.googleusercontent.com">
+        {children}
+       </GoogleOAuthProvider>
         
         </Box>
       </Box>

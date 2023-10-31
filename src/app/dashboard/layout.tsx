@@ -6,13 +6,14 @@ import { ReactNode, useEffect, useState } from 'react';
 export default function DashboardLayout({children} : {children : ReactNode}) {
   const [showChild, setShowChild] = useState(false);
   useEffect(() => {
-    setShowChild(true)
+    setShowChild(true);
   }, [])
 
   if (!showChild) {
     return null;
   }
   return (
+    
     <html>
       <body>
       <Box
@@ -27,11 +28,12 @@ export default function DashboardLayout({children} : {children : ReactNode}) {
        }}
       >
        <GoogleOAuthProvider clientId="604456811509-ivvuuq5qcn3h0elfhf2lijqd6bupoemv.apps.googleusercontent.com">
-        <main>{children}</main>
-     </GoogleOAuthProvider>
+        {children}
+       </GoogleOAuthProvider>
 
       </Box>
       </body>
     </html>
+  
   )
 }
