@@ -19,7 +19,6 @@ export default function LoginLayout({ children}: LayoutProps) {
     return null
   }
   return (
-    <>
     <html>
       <body>
       <Grid container>
@@ -64,11 +63,7 @@ export default function LoginLayout({ children}: LayoutProps) {
         </Box>
       </Box>
       </Grid>
-    
       </body>
    </html>
-       
-    </>
-
   )
 }

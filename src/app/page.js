@@ -1,6 +1,5 @@
 'use client'
 import { useRouter } from 'next/navigation';
-
 export default function Page() {
   const router = useRouter();
  // Örnek: Belirli bir koşul sağlandığında LoginPage'e yönlendirme yapın
@@ -12,8 +11,6 @@ export default function Page() {
  
   return (
     <>
-
- 
     </>
   )
 }

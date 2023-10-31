@@ -7,11 +7,6 @@ export default function PasswordReset() {
     <LoginLayout>
     <PasswordResetContent />
     </LoginLayout>
-
-
-
     </>
-
-
   )
 }

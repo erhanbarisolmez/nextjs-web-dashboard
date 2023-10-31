@@ -15,8 +15,8 @@ export default function LoginPage() {
   }
 
   return (
-    <>
-  
+    <div>
+
    <LoginLayout>
     {/* Login Component */}
 
@@ -94,7 +94,7 @@ export default function LoginPage() {
 
   
           
-    </>
+    </div>
 
   )
 }

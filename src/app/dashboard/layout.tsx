@@ -1,5 +1,6 @@
 'use client'
 import { Box } from '@mui/material';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import { ReactNode, useEffect, useState } from 'react';
 
 export default function DashboardLayout({children} : {children : ReactNode}) {
@@ -9,11 +10,9 @@ export default function DashboardLayout({children} : {children : ReactNode}) {
   }, [])
 
   if (!showChild) {
-    return null
+    return null;
   }
   return (
-
-
     <html>
       <body>
       <Box
@@ -27,12 +26,12 @@ export default function DashboardLayout({children} : {children : ReactNode}) {
         color:'black'
        }}
       >
-      {children}
+       <GoogleOAuthProvider clientId="604456811509-ivvuuq5qcn3h0elfhf2lijqd6bupoemv.apps.googleusercontent.com">
+        <main>{children}</main>
+     </GoogleOAuthProvider>
 
       </Box>
       </body>
     </html>
-   
-
   )
 }
