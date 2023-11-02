@@ -28,7 +28,7 @@ export default function DashboardLayout({children} : {children : ReactNode}) {
        }}
       >
        <GoogleOAuthProvider clientId="604456811509-ivvuuq5qcn3h0elfhf2lijqd6bupoemv.apps.googleusercontent.com">
-        {children}
+        <div>{children}</div>
        </GoogleOAuthProvider>
 
       </Box>

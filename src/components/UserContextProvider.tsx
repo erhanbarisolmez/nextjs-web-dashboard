@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, createContext, useState } from 'react';
+import React, { Dispatch, SetStateAction, createContext, useContext, useState } from 'react';
 
 interface User{
   username: string;
@@ -13,7 +13,7 @@ interface UserContextProps{
 }
 export const UserContext = createContext<UserContextType | undefined>(undefined);
 
-export const UserContextComponent = ({children}: UserContextProps) => {
+export const UserContextProvider = ({children}: UserContextProps) => {
   const [user, setUser] = useState<User |null>(null);
   return (
     <UserContext.Provider value={{user,setUser}}>
@@ -21,3 +21,6 @@ export const UserContextComponent = ({children}: UserContextProps) => {
     </UserContext.Provider>
   )
 }
+export const useUser = () => {
+  return useContext(UserContext);
+};
