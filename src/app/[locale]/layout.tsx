@@ -5,8 +5,10 @@ import { notFound } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import './globals.css';
 interface RootLayoutProps{
-  children?: React.ReactNode;
-  params?: any;
+  children: React.ReactNode;
+  params: {
+    locale: string;
+  };
 }
 
 const locales = ['en', 'tr'];

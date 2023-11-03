@@ -15,7 +15,7 @@ export default function Dashboard(props : DashboardProps) {
       <Typography variant="caption" sx={{ color: 'purple' }}>
         Welcome, {props.user?.name || 'Guest'}! {/* props.user ile kullanıcı adını görüntüleme */}
       </Typography>
-      <Link href={"/"}>.</Link>
+      <Link href={"/login"}>.</Link>
     </>
   )
 }

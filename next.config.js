@@ -1,15 +1,5 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-  async redirects() {
-    return [
-      {
-        source: '/en',
-        destination: '/en/login',
-        permanent: true,
-      },
-    ];
-  },
-};
+
 const nextConfig = {
   images: {
     domains: ['cdn.pixabay.com'], // İzin vermek istediğiniz resim kaynaklarını burada ekleyin
@@ -23,4 +13,15 @@ const withNextIntl = require('next-intl/plugin')(
 module.exports = withNextIntl({
   // Other Next.js configuration ...
 });
+// module.exports = {
+//   async redirects() {
+//     return [
+//       {
+//         source: '/',
+//         destination: '/en/login',
+//         permanent: true,
+//       },
+//     ];
+//   },
+// };
 module.exports = withNextIntl(nextConfig);

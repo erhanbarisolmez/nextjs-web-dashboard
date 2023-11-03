@@ -59,7 +59,7 @@ export default function LoginLayout({ children}: LayoutProps) {
           }}
         >
    
-   <GoogleOAuthProvider clientId="604456811509-ivvuuq5qcn3h0elfhf2lijqd6bupoemv.apps.googleusercontent.com">
+      <GoogleOAuthProvider clientId="604456811509-ivvuuq5qcn3h0elfhf2lijqd6bupoemv.apps.googleusercontent.com">
         {children}
        </GoogleOAuthProvider>
         
