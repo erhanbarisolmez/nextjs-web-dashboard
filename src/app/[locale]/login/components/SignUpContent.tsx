@@ -8,7 +8,9 @@ import Header from "@/components/Header";
 import SignInWithButton from "@/components/SignInWithButton";
 import { Box } from "@mui/material";
 import Checkbox from '@mui/material/Checkbox';
+import { useTranslations } from "next-intl";
 export default function SignUpContent() {
+  const t = useTranslations(); // ?
   return (
     <Box sx={{
       display:"grid",
@@ -17,7 +19,7 @@ export default function SignUpContent() {
     }}> 
     <Header headerName={"Sign Up"} headerTitle={"Create Account"} />
      {/* Social Sign Button */}
-     <SignInWithButton />
+     <SignInWithButton googleText={t('sign-in-with-google')} appleText={t('sign-in-with-apple')}/>
 
 {/* Divider*/}
  <Box sx={{

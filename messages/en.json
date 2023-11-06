@@ -1,19 +1,25 @@
 {
   "LOGIN": {
-    "SignUp": {
-      "header-name": "Sign Up",
-      "header-title": "You Social Account"
+    "SignIn": {
+      "header-name": "Sign In",
+      "header-title": "You Social Account",
+      "sign-in-with-google": "Sign in with Google",
+      "sign-in-with-apple": "Sign in with Apple",
+      "or-with-email": "Or with Email",
+      "email-text": "Email",
+      "password-text": "Password",
+      "forgot-password": "Forgot Password?",
+      "sign-in-button": "Sign In",
+      "not-a-member-yet": "Not a member yet?",
+      "sign-up": "Sign Up",
+      "footer-terms": "TERMS",
+      "footer-plans": "PLANS",
+      "footer-contact-us": "CONTACT US"
     },
-    "PasswordReset":{
-
-    },
-    "Phone": {
-
-    }
+    "PasswordReset": {},
+    "Phone": {}
   },
   "DASHBOARD": {
-    "HOME":{
-      
-    }
+    "HOME": {}
   }
 }

@@ -1,19 +1,25 @@
 {
   "LOGIN": {
-    "SignUp": {
-      "header-name": "Üye Ol",
-      "header-title": "Sosyal Hesabınız"
+    "SignIn": {
+      "header-name": "Giriş Yap",
+      "header-title": "Sosyal Hesabınız",
+      "sign-in-with-google": "Google'la oturum açın",
+      "sign-in-with-apple": "Apple'la oturum açın",
+      "or-with-email": "Veya E-posta ile",
+      "email-text": "E-posta",
+      "password-text": "Şifre",
+      "forgot-password": "Parolanızı mı unuttunuz?",
+      "sign-in-button": "Giriş Yap",
+      "not-a-member-yet": "Henüz üye değil misiniz?",
+      "sign-up": "Üye olmak",
+      "footer-terms": "ŞARTLAR",
+      "footer-plans": "PLANLAR",
+      "footer-contact-us": "BİZE ULAŞIN"
     },
-    "PasswordReset":{
-
-    },
-    "Phone": {
-
-    }
+    "PasswordReset": {},
+    "Phone": {}
   },
   "DASHBOARD": {
-    "HOME":{
-      
-    }
+    "HOME": {}
   }
 }

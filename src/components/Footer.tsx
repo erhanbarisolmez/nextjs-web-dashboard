@@ -1,7 +1,16 @@
 import { Box, Link, Typography } from "@mui/material";
 
-export default function Footer() {
-
+interface FooterProps{
+  terms?: string;
+  plans?: string;
+  contactUs?: string;
+}
+export default function Footer(props : FooterProps) {
+  const {
+    terms = "TERMS",
+    plans = "PLANS",
+    contactUs = "CONTACT US"
+  } = props;
   return (
     <Box sx={{
       display:'flex',
@@ -10,9 +19,9 @@ export default function Footer() {
 
      }}>
     <Typography variant='caption' sx={{}} >
-    <b><Link href={"/"} sx={{color:'white'}}> TERMS  |</Link>
-    <Link href={"/"} sx={{color:'white'}}> PLANS  |</Link>
-    <Link href={"/"} sx={{color:'white'}}> CONTACT US</Link></b>
+    <b><Link href={"/"} sx={{color:'white'}}> {terms}  |</Link>
+    <Link href={"/"} sx={{color:'white'}}> {plans}  |</Link>
+    <Link href={"/"} sx={{color:'white'}}>  {contactUs} </Link></b>
     </Typography>
     
      </Box>

@@ -12,7 +12,8 @@ interface SignInWithButtonProps{
   size?: "small" | "medium" | "large";
   user?: any;
   setUser?: any;
-
+  googleText?: string;
+  appleText?: string;
 }
 
 export default function SignInWithButton(props: SignInWithButtonProps) {
@@ -46,7 +47,8 @@ export default function SignInWithButton(props: SignInWithButtonProps) {
     variant= "contained",
     color = "info",
     size = "medium",
-
+    googleText,
+    appleText
   } = props;
   
 
@@ -58,13 +60,13 @@ export default function SignInWithButton(props: SignInWithButtonProps) {
     }}>
      
       <Button variant={variant} onClick={() => signIn()} color={color} startIcon={<GoogleIcon />} size={size}  sx={{ mr: { xs: 0, md: 2 }, mb: { xs: 2, md: 0 } }}>
-      Sign in with Google
+      {googleText}
       </Button>
   
       <Link href={'/login/phone'} >
       <Button variant={variant}  color={color} startIcon={<AppleIcon />} size={size} fullWidth sx={{ ml: { xs: 0, md: 0 }, mt: { xs: 2, md: 0 } }}>
       
-        Sign in with Apple
+        {appleText}
        
       </Button>
       </Link>

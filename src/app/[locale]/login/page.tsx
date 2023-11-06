@@ -10,7 +10,7 @@ import { useTranslations } from 'next-intl';
 
 
 export default function LoginPage() {
-  const t = useTranslations('LOGIN.SignUp'); // 'product' dil dosyasının anahtarını buraya ekleyin
+  const t = useTranslations('LOGIN.SignIn'); // 'product' dil dosyasının anahtarını buraya ekleyin
  
   return (
         <Box sx={{
@@ -22,13 +22,13 @@ export default function LoginPage() {
           <Header  headerName={t('header-name')} headerTitle={t('header-title')}/>
           
           {/* Social Sign Button */}
-          <SignInWithButton />
+          <SignInWithButton googleText={t('sign-in-with-google')} appleText={t('sign-in-with-apple')}/>
 
         {/* Divider*/}
          <Box sx={{
             p:3,
           }}>
-               <DividerWith text={'Or with Email'} />
+               <DividerWith text={t('or-with-email')} />
         </Box>
 
         {/* CustomTextfield EMAIL&PASSWORD */}
@@ -38,8 +38,8 @@ export default function LoginPage() {
               justifyContent:'center',
               alignItems:'center'
             }}>
-            <CustomTextfield label={'Email'} variant={'outlined'} id={''} type={'email'} autoComplete={'true'}  />
-            <CustomTextfield label={'Password'} variant={'outlined'} id={''} type={'password'} autoComplete={'true'}  />     
+            <CustomTextfield label={t('email-text')} variant={'outlined'} id={'email'} type={'email'} autoComplete={'true'}  />
+            <CustomTextfield label={t('password-text')} variant={'outlined'} id={'password'} type={'password'} autoComplete={'true'}  />     
             </Box>
        {/* CustomLink Component Forgot Password */}
          <Box sx={{
@@ -50,7 +50,7 @@ export default function LoginPage() {
           alignContent:'center',
           alignItems:'center'
          }}>
-          <CustomLink text={''} link={'/login/password-reset'} variant='subtitle2' linkText='Forgot Password?' />
+          <CustomLink text={''} link={'/login/password-reset'} variant='subtitle2' linkText={t('forgot-password')} />
          </Box>
          {/* CustomButton Components Sign In Button */}
          <Box
@@ -62,7 +62,7 @@ export default function LoginPage() {
           }}
          >
           <Link href='/dashboard' width={'100%'}>
-          <CustomButton buttonTitle={'Sign In'} />
+          <CustomButton buttonTitle={t('sign-in-button')} />
           </Link>
          </Box>
           {/* CustomLink Components SignUp */}
@@ -73,11 +73,11 @@ export default function LoginPage() {
             justifyContent:'center',
           }}>
 
-        <CustomLink text={'Not a member yet?'} variant={'subtitle2'} link={'/login/signup'} boldLinkText='Sign Up' />
+        <CustomLink text={t('not-a-member-yet')} variant={'subtitle2'} link={'/login/signup'} boldLinkText={t('sign-up')} />
         
           </Box>
          {/* Footer */}
-          <Footer />
+          <Footer terms={t('footer-terms')} plans={t('footer-plans')} contactUs={t('footer-contact-us')} />
        </Box>
    
 
