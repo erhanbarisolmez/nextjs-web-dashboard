@@ -4,7 +4,6 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import { notFound } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import RootLayout from "../layout";
-import LeftContent from "./components/LeftContent";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -13,7 +12,7 @@ interface LayoutProps {
   };
 }
 const locales = ['en', 'tr'];
-export default function LoginLayout({ children, params:{locale}}: LayoutProps) {
+export default function ProductLayout({ children, params:{locale}}: LayoutProps) {
     // Validate that the incoming `locale` parameter is valid
     const isValidLocale = locales.some((cur) => cur === locale);
     if (!isValidLocale) notFound();
@@ -55,7 +54,6 @@ export default function LoginLayout({ children, params:{locale}}: LayoutProps) {
           }}
         >
         
-       <LeftContent />
          
         </Box>
      

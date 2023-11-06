@@ -1,5 +1,19 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "LOGIN": {
+    "SignUp": {
+      "header-name": "Sign Up",
+      "header-title": "You Social Account"
+    },
+    "PasswordReset":{
+
+    },
+    "Phone": {
+
+    }
+  },
+  "DASHBOARD": {
+    "HOME":{
+      
+    }
   }
 }

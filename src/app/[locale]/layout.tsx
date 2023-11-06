@@ -1,6 +1,7 @@
 'use client'
 import { Box, Grid } from '@mui/material';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import { NextIntlProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import './globals.css';
@@ -12,6 +13,7 @@ interface RootLayoutProps{
 }
 
 const locales = ['en', 'tr'];
+const messages = {}; // Çeviri verileri
 
 export default function RootLayout({children, params: {locale}} : RootLayoutProps) {
   // Validate that the incoming `locale` parameter is valid
@@ -30,27 +32,32 @@ export default function RootLayout({children, params: {locale}} : RootLayoutProp
   }
   
   return (
+
     <html lang={locale}>
      <body>
+     <NextIntlProvider messages={messages} locale={locale}>
       <Grid container>
       <Box
        sx={{
         display: "flex",
         gridTemplateColumns:'repeat(1,1fr)',
-        width:"1",
-        height:'100vh',
+ 
         backgroundColor:'black',
         justifyContent:'center',
        }}
       >
         
       <GoogleOAuthProvider clientId="604456811509-ivvuuq5qcn3h0elfhf2lijqd6bupoemv.apps.googleusercontent.com">
-        <main>{children}</main>
+    
+      {children}
+     
+
      </GoogleOAuthProvider>
       </Box>
       </Grid>
-
+      </NextIntlProvider>
       </body>
     </html>
+
   )
 }

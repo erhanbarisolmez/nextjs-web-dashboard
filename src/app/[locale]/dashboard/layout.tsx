@@ -2,7 +2,6 @@
 import { Box } from '@mui/material';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { ReactNode, useEffect, useState } from 'react';
-
 export default function DashboardLayout({children} : {children : ReactNode}) {
   const [showChild, setShowChild] = useState(false);
   useEffect(() => {
@@ -27,6 +26,7 @@ export default function DashboardLayout({children} : {children : ReactNode}) {
         color:'black'
        }}
       >
+
        <GoogleOAuthProvider clientId="604456811509-ivvuuq5qcn3h0elfhf2lijqd6bupoemv.apps.googleusercontent.com">
         <div>{children}</div>
        </GoogleOAuthProvider>

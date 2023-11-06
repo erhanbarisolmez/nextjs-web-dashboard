@@ -1,4 +1,3 @@
-'use client'
 import CustomButton from '@/components/CustomButton';
 import CustomLink from '@/components/CustomLink';
 import CustomTextfield from '@/components/CustomTextfield';
@@ -7,38 +6,20 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import SignInWithButton from '@/components/SignInWithButton';
 import { Box, Link } from "@mui/material";
-import { useEffect, useState } from 'react';
-import LoginLayout from "./layout";
+import { useTranslations } from 'next-intl';
 
 
 export default function LoginPage() {
-  const [showChild, setShowChild] = useState(false);
-  useEffect(() => {
-    setShowChild(true)
-  }, [])
-
-  if (!showChild) {
-    return null
-  }
-
-  function handleClick(): void {
-    
-  }
-
+  const t = useTranslations('LOGIN.SignUp'); // 'product' dil dosyasının anahtarını buraya ekleyin
+ 
   return (
-   <>
-  
-   <LoginLayout>
-    {/* Login Component */}
-
-        {/* Content */}
-            <Box sx={{
+        <Box sx={{
             display:"grid",
             flexDirection:'column',
             p:3
-          }}> 
+         }}> 
           {/* Header */}
-          <Header headerName={'Sign In'} headerTitle={'You Social Account'} />
+          <Header  headerName={t('header-name')} headerTitle={t('header-title')}/>
           
           {/* Social Sign Button */}
           <SignInWithButton />
@@ -81,7 +62,7 @@ export default function LoginPage() {
           }}
          >
           <Link href='/dashboard' width={'100%'}>
-          <CustomButton buttonTitle={'Sign In'} onClick={handleClick}  />
+          <CustomButton buttonTitle={'Sign In'} />
           </Link>
          </Box>
           {/* CustomLink Components SignUp */}
@@ -101,8 +82,7 @@ export default function LoginPage() {
    
 
         
-   </LoginLayout>
 
-   </>
+   
   )
 }

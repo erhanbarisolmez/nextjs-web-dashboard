@@ -7,7 +7,6 @@ import KeyboardBackspaceOutlinedIcon from '@mui/icons-material/KeyboardBackspace
 import { Box } from "@mui/material";
 import Link from "next/link";
 import { useState } from "react";
-import LoginLayout from "../layout";
 
 export default function Phone() {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -22,12 +21,9 @@ export default function Phone() {
     
   }
   return (
-    <LoginLayout >  
-    <>
-    {/* Content */}
+
     <Box sx={{
       display:"grid",
-      flexDirection:'column',
       p:3
     }}> 
     {/* Header Component */}
@@ -58,8 +54,7 @@ export default function Phone() {
     </Box>
   
 
-</>
-</LoginLayout>
+
  
   )
 }

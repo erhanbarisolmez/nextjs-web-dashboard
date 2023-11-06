@@ -1,5 +1,19 @@
 {
-  "Index": {
-    "title": "Merhaba dünya!"
+  "LOGIN": {
+    "SignUp": {
+      "header-name": "Üye Ol",
+      "header-title": "Sosyal Hesabınız"
+    },
+    "PasswordReset":{
+
+    },
+    "Phone": {
+
+    }
+  },
+  "DASHBOARD": {
+    "HOME":{
+      
+    }
   }
 }

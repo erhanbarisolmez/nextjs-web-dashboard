@@ -1,3 +1,4 @@
+'use client'
 import { Box, Typography } from "@mui/material";
 
 interface HeaderProps{
@@ -11,6 +12,7 @@ export default function Header(props: HeaderProps) {
     headerTitle
   } = props;
   return (
+    <>
     <Box sx={{
       display:'flex',
       flexDirection:'column',
@@ -26,5 +28,6 @@ export default function Header(props: HeaderProps) {
         {headerTitle}
         </Typography>
     </Box>
+    </>
   )
 }
