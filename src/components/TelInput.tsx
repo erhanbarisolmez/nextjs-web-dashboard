@@ -2,7 +2,7 @@
 import { MuiTelInput } from 'mui-tel-input';
 import React from 'react';
 interface TelInputProps{
-  onChange: (value: string) => void;
+  onChange?: (value: string) => void;
 }
 export default function TelInput(props:TelInputProps) {
   const {onChange} = props;
@@ -12,7 +12,7 @@ export default function TelInput(props:TelInputProps) {
    
     setValue(newValue);
     console.log(value);
-    onChange(value);
+    // onChange(value);
 
   }
   return (

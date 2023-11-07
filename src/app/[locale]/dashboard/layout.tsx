@@ -1,19 +1,33 @@
 'use client'
 import { Box } from '@mui/material';
-import { GoogleOAuthProvider } from '@react-oauth/google';
-import { ReactNode, useEffect, useState } from 'react';
-export default function DashboardLayout({children} : {children : ReactNode}) {
+import { notFound } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import RootLayout from '../layout';
+interface LayoutProps {
+  children: React.ReactNode;
+  params: {
+    locale: string;
+  };
+}
+const locales = ['en', 'tr'];
+
+export default function DashboardLayout({ children, params:{locale}}: LayoutProps) {
+    // Validate that the incoming `locale` parameter is valid
+    const isValidLocale = locales.some((cur) => cur === locale);
+    if (!isValidLocale) notFound();
+  
   const [showChild, setShowChild] = useState(false);
   useEffect(() => {
-    setShowChild(true);
+    setShowChild(true)
   }, [])
-
   if (!showChild) {
-    return null;
+    return null
   }
   return (
-    
-    <html>
+    <RootLayout  params={{
+      locale: locale
+    }} >
+    <html lang={locale}>
       <body>
       <Box
        sx={{
@@ -26,14 +40,13 @@ export default function DashboardLayout({children} : {children : ReactNode}) {
         color:'black'
        }}
       >
-
-       <GoogleOAuthProvider clientId="604456811509-ivvuuq5qcn3h0elfhf2lijqd6bupoemv.apps.googleusercontent.com">
         <div>{children}</div>
-       </GoogleOAuthProvider>
+
 
       </Box>
+      
       </body>
     </html>
-  
+    </RootLayout>
   )
 }

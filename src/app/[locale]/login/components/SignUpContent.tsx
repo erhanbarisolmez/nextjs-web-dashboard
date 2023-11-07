@@ -9,7 +9,7 @@ import { Box } from "@mui/material";
 import Checkbox from '@mui/material/Checkbox';
 import { useTranslations } from "next-intl";
 export default function SignUpContent() {
-  const t = useTranslations('LOGIN.SignUp'); // ?
+  const t = useTranslations('LOGIN.SignUp');
   return (
     <Box sx={{
       display:"grid",
@@ -51,7 +51,7 @@ export default function SignUpContent() {
             mt:2,
             justifyContent:'center',
           }}>
-    <CustomButton buttonTitle={t('sign-up-button')}/>
+    <CustomButton buttonTitle={t('sign-up-button')} />
     </Box>
     {/* CustomLink Components SignUp */}
     <Box

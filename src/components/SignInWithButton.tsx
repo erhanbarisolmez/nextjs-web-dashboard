@@ -4,7 +4,7 @@ import GoogleIcon from '@mui/icons-material/Google';
 import { Box, Button } from '@mui/material';
 import { useGoogleLogin } from '@react-oauth/google';
 import jwt from 'jsonwebtoken'; // jsonwebtoken'ı projeye ekledik
-import Link from 'next/link';
+import Link from 'next-intl/link';
 import { useEffect, useState } from 'react';
 interface SignInWithButtonProps{
   variant?: "text" | "outlined" | "contained";

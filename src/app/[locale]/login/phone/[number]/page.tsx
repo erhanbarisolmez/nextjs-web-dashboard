@@ -5,13 +5,12 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import KeyboardBackspaceOutlinedIcon from '@mui/icons-material/KeyboardBackspaceOutlined';
 import { Box, Link, TextField, Typography } from "@mui/material";
-import LoginLayout from "../../layout";
 
 export default function TwoFactorVerification(...[props] : any) {
 
   return (
     <>
-    <LoginLayout>
+   
     <Box sx={{
             display:"flex",
             flexDirection:'column',
@@ -89,7 +88,7 @@ export default function TwoFactorVerification(...[props] : any) {
 
   <Footer />
     </Box>
-   </LoginLayout>
+ 
     </>
   )
 }

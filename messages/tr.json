@@ -1,7 +1,7 @@
 {
   "LOGIN": {
     "SignIn": {
-      "header-name": "Kayıt Ol",
+      "header-name": "Giriş Yap",
       "header-title": "Sosyal Hesabınız",
       "sign-in-with-google": "Google'la oturum açın",
       "sign-in-with-apple": "Apple'la oturum açın",
@@ -11,7 +11,7 @@
       "forgot-password": "Parolanızı mı unuttunuz?",
       "sign-in-button": "Giriş Yap",
       "not-a-member-yet": "Henüz üye değil misiniz?",
-      "sign-up": "Üye olmak",
+      "sign-up": "Üye ol",
       "footer-terms": "ŞARTLAR",
       "footer-plans": "PLANLAR",
       "footer-contact-us": "BİZE ULAŞIN"
@@ -35,13 +35,13 @@
       "or-with-email": "Veya E-posta ile",
       "sign-in-with-google": "Google ile giriş yap",
       "sign-in-with-apple": "Apple'la oturum açın",
-      "header-name": "Üye Olmak",
+      "header-name": "Üye Ol",
       "header-title": "Hesap oluşturmak",
       "terms": "Şartlar",
       "i-accept-the": "kabul ediyorum",
       "sign-up-button": "Üye ol",
       "already-have-an-account": "Zaten hesabınız var mı",
-      "sign-in-link": "Kayıt olmak",
+      "sign-in-link": "Giriş Yap",
       "footer-terms": "ŞARTLAR",
       "footer-plans": "PLANLAR",
       "footer-contact-us": "BİZE ULAŞIN"

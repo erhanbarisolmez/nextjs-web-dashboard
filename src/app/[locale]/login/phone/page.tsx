@@ -11,54 +11,54 @@ import { useState } from "react";
 
 export default function Phone() {
   const t = useTranslations('LOGIN.Phone');
+  
   const [phoneNumber, setPhoneNumber] = useState("");
-  const handleOnChange = (value:any) => {
+  const handleOnChange = (value: any) => {
     setPhoneNumber(value);
     console.log('handleOnChange' + setPhoneNumber);
   }
 
-  function handleOnSubmit() :void{
+  function handleOnSubmit(): void {
     setPhoneNumber(phoneNumber);
-    console.log("handleOnSubmit" +phoneNumber);
-    
+    console.log("handleOnSubmit" + phoneNumber);
+
   }
   return (
 
     <Box sx={{
-      display:"grid",
-      p:3
-    }}> 
-    
-    {/* Header Component */}
-    
-    <Header headerName= "Sign in with Apple" headerTitle={"Phone Number"} />
-    <Box
-     sx={{}}
-    >
-    <Link href="/login">
-    <KeyboardBackspaceOutlinedIcon fontSize="medium" />
-    </Link>
-    </Box>
-    <Box sx={{
-        display:'flex',
-        flexDirection:'column',
-        justifyContent:'center',
-        alignItems:'center',
-        width:'100%',
+      display: "grid",
+      p: 3
+    }}>
+
+      {/* Header Component */}
+      <Header headerName={t('header-name')} headerTitle={"Phone Number"} />
+      <Box
+        sx={{}}
+      >
+        <Link href="/login">
+          <KeyboardBackspaceOutlinedIcon fontSize="medium" />
+        </Link>
+      </Box>
+      <Box sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
       }}>
-     <TelInput onChange={handleOnChange} />
+        <TelInput onChange={handleOnChange} />
+      </Box>
+
+      <Link href={`/login/phone/${phoneNumber}`}>
+        <CustomButton buttonTitle={"Submit"} onClick={handleOnSubmit} />
+      </Link>
+
+      {/* Footer component */}
+      <Footer />
     </Box>
 
-    <Link href={`/login/phone/${phoneNumber}`}>    
-    <CustomButton buttonTitle={"Submit"} onClick={handleOnSubmit} />
-    </Link>
-
-{/* Footer component */}
-    <Footer />
-    </Box>
-  
 
 
- 
+
   )
 }

@@ -1,4 +1,5 @@
 'use client'
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { Box, Grid } from '@mui/material';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { NextIntlProvider } from 'next-intl';
@@ -37,6 +38,9 @@ export default function RootLayout({children, params: {locale}} : RootLayoutProp
      <body>
      <NextIntlProvider messages={messages} locale={locale}>
       <Grid container>
+      <Box sx={{}}>
+          <LanguageSwitcher />
+        </Box>
       <Box
        sx={{
         display: "flex",
@@ -46,7 +50,7 @@ export default function RootLayout({children, params: {locale}} : RootLayoutProp
         justifyContent:'center',
        }}
       >
-        
+      
       <GoogleOAuthProvider clientId="604456811509-ivvuuq5qcn3h0elfhf2lijqd6bupoemv.apps.googleusercontent.com">
     
       {children}
