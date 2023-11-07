@@ -16,8 +16,36 @@
       "footer-plans": "PLANS",
       "footer-contact-us": "CONTACT US"
     },
-    "PasswordReset": {},
-    "Phone": {}
+    "PasswordReset": {
+      "header-name": "Password Reset",
+      "header-title": "Enter your email to reset your password",
+      "email-text": "Email",
+      "button-text": "Submit",
+      "footer-terms": "Terms",
+      "footer-plans": "Plans",
+      "footer-contact-us": "Contact US"
+    },
+    "Phone": {
+      "header-name": "Sign in with Apple"
+    },
+    "SignUp": {
+      "header-name": "Sign Up",
+      "header-title": "Create Account",
+      "sign-in-with-google": "sign-in-with-google",
+      "sign-in-with-apple": "sign-in-with-apple",
+      "or-with-email": "Or with Email",
+      "email-text": "Email",
+      "password-test": "Password",
+      "repeat-password-text": "Repeat Password",
+      "i-accept-the": "I Accept the",
+      "terms": "Terms",
+      "sign-up-button": "Sign Up",
+      "already-have-an-account": "Already have an Account?",
+      "sign-in-link": "Sign in",
+      "footer-terms": "TERMS",
+      "footer-plans": "PLANS",
+      "footer-contact-us": "CONTACT US"
+    }
   },
   "DASHBOARD": {
     "HOME": {}

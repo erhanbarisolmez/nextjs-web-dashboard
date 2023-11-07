@@ -1,4 +1,3 @@
-
 import CustomButton from "@/components/CustomButton";
 import CustomLink from "@/components/CustomLink";
 import CustomTextfield from "@/components/CustomTextfield";
@@ -10,14 +9,14 @@ import { Box } from "@mui/material";
 import Checkbox from '@mui/material/Checkbox';
 import { useTranslations } from "next-intl";
 export default function SignUpContent() {
-  const t = useTranslations(); // ?
+  const t = useTranslations('LOGIN.SignUp'); // ?
   return (
     <Box sx={{
       display:"grid",
       flexDirection:'column',
       p:3
     }}> 
-    <Header headerName={"Sign Up"} headerTitle={"Create Account"} />
+    <Header headerName={t('header-name')} headerTitle={t('header-title')} />
      {/* Social Sign Button */}
      <SignInWithButton googleText={t('sign-in-with-google')} appleText={t('sign-in-with-apple')}/>
 
@@ -25,7 +24,7 @@ export default function SignUpContent() {
  <Box sx={{
     p:3,
   }}>
-       <DividerWith text={'Or with Email'} />
+       <DividerWith text={t('or-with-email')} />
 </Box>
 
 {/* CustomTextfield EMAIL&PASSWORD */}
@@ -35,15 +34,15 @@ export default function SignUpContent() {
       justifyContent:'center',
       alignItems:'center'
     }}>
-    <CustomTextfield label={'Email'} variant={'outlined'} id={''} type={'email'} autoComplete={'true'}  />
-    <CustomTextfield label={'Password'} variant={'outlined'} id={''} type={'password'} autoComplete={'true'}  />
-    <CustomTextfield label={'Repeat Password'} variant={'outlined'} id={''} type={'password'} autoComplete={'true'}  />          
+    <CustomTextfield label={t('email-text')} variant={'outlined'} id={''} type={'email'} autoComplete={'true'}  />
+    <CustomTextfield label={t('password-test')} variant={'outlined'} id={''} type={'password'} autoComplete={'true'}  />
+    <CustomTextfield label={t('repeat-password-text')} variant={'outlined'} id={''} type={'password'} autoComplete={'true'}  />          
     </Box>
     <Box sx={{
       display:'flex',
       alignItems:'center',
     }}>
-    <Checkbox color="default" /><CustomLink text={"I Accept the"} link={"/login/signup"} boldLinkText="Terms" />
+    <Checkbox color="default" /><CustomLink text={t('i-accept-the')} link={"/login/signup"} boldLinkText={t('terms')} />
 
     </Box>
     <Box
@@ -52,7 +51,7 @@ export default function SignUpContent() {
             mt:2,
             justifyContent:'center',
           }}>
-    <CustomButton buttonTitle={"Sign Up"}/>
+    <CustomButton buttonTitle={t('sign-up-button')}/>
     </Box>
     {/* CustomLink Components SignUp */}
     <Box
@@ -62,10 +61,10 @@ export default function SignUpContent() {
             justifyContent:'center',
           }}>
        
-        <CustomLink text={'Already have an Account?'} variant={'subtitle2'} link={'/login'} boldLinkText='Sign in' />
+        <CustomLink text={t('already-have-an-account')} variant={'subtitle2'} link={'/login'} boldLinkText={t('sign-in-link') }/>
         
     </Box>
-    <Footer />
+    <Footer terms={t('footer-terms')} plans={t('footer-plans')} contactUs={t('footer-contact-us')} />
     </Box>
   )
 }

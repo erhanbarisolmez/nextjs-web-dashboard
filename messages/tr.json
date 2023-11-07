@@ -1,7 +1,7 @@
 {
   "LOGIN": {
     "SignIn": {
-      "header-name": "Giriş Yap",
+      "header-name": "Kayıt Ol",
       "header-title": "Sosyal Hesabınız",
       "sign-in-with-google": "Google'la oturum açın",
       "sign-in-with-apple": "Apple'la oturum açın",
@@ -16,8 +16,36 @@
       "footer-plans": "PLANLAR",
       "footer-contact-us": "BİZE ULAŞIN"
     },
-    "PasswordReset": {},
-    "Phone": {}
+    "PasswordReset": {
+      "header-name": "Parola Sıfırlama",
+      "header-title": "Şifrenizi sıfırlamak için e-postanızı girin",
+      "email-text": "E-posta",
+      "button-text": "Gönder",
+      "footer-terms": "ŞARTLAR",
+      "footer-plans": "PLANLAR",
+      "footer-contact-us": "BİZE ULAŞIN"
+    },
+    "Phone": {
+      "header-name": "Apple'la oturum açın"
+    },
+    "SignUp": {
+      "repeat-password-text": "Şifreyi tekrar girin",
+      "password-test": "Şifre",
+      "email-text": "E-posta",
+      "or-with-email": "Veya E-posta ile",
+      "sign-in-with-google": "Google ile giriş yap",
+      "sign-in-with-apple": "Apple'la oturum açın",
+      "header-name": "Üye Olmak",
+      "header-title": "Hesap oluşturmak",
+      "terms": "Şartlar",
+      "i-accept-the": "kabul ediyorum",
+      "sign-up-button": "Üye ol",
+      "already-have-an-account": "Zaten hesabınız var mı",
+      "sign-in-link": "Kayıt olmak",
+      "footer-terms": "ŞARTLAR",
+      "footer-plans": "PLANLAR",
+      "footer-contact-us": "BİZE ULAŞIN"
+    }
   },
   "DASHBOARD": {
     "HOME": {}
