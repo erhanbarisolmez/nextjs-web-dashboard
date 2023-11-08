@@ -1,4 +1,5 @@
 'use client'
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Box, Grid } from "@mui/material";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { notFound } from "next/navigation";
@@ -68,7 +69,9 @@ export default function LoginLayout({ children, params:{locale}}: LayoutProps) {
             alignItems:'center'
           }}
         >
-     
+       <Box sx={{}}>
+          <LanguageSwitcher hrefEN={'/login'} hrefTR={'/login'} />
+        </Box>
       <GoogleOAuthProvider clientId="604456811509-ivvuuq5qcn3h0elfhf2lijqd6bupoemv.apps.googleusercontent.com">
         {children}
        </GoogleOAuthProvider>

@@ -1,5 +1,4 @@
 'use client'
-import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { Box, Grid } from '@mui/material';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { NextIntlProvider } from 'next-intl';
@@ -38,9 +37,7 @@ export default function RootLayout({children, params: {locale}} : RootLayoutProp
      <body>
      <NextIntlProvider messages={messages} locale={locale}>
       <Grid container>
-      <Box sx={{}}>
-          <LanguageSwitcher />
-        </Box>
+    
       <Box
        sx={{
         display: "flex",
