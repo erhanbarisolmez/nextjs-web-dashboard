@@ -26,7 +26,12 @@
       "footer-contact-us": "Contact US"
     },
     "Phone": {
-      "header-name": "Sign in with Apple"
+      "header-name": "Sign in with Apple",
+      "header-title": "Phone Number",
+      "button-text": "Submit",
+      "footer-terms": "Terms",
+      "footer-plans": "Plans",
+      "footer-contact-us": "Contact US"
     },
     "SignUp": {
       "header-name": "Sign Up",

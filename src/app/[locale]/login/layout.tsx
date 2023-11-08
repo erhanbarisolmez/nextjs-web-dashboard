@@ -1,11 +1,13 @@
 'use client'
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Box, Grid } from "@mui/material";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { notFound } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import RootLayout from "../layout";
 import LeftContent from "./components/LeftContent";
+ 
+import { useRouter } from 'next-intl/client';
+
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -15,6 +17,8 @@ interface LayoutProps {
 }
 const locales = ['en', 'tr'];
 export default function LoginLayout({ children, params:{locale}}: LayoutProps) {
+   
+    const router = useRouter();
     // Validate that the incoming `locale` parameter is valid
     const isValidLocale = locales.some((cur) => cur === locale);
     if (!isValidLocale) notFound();
@@ -69,9 +73,7 @@ export default function LoginLayout({ children, params:{locale}}: LayoutProps) {
             alignItems:'center'
           }}
         >
-       <Box sx={{}}>
-          <LanguageSwitcher hrefEN={'/login'} hrefTR={'/login'} />
-        </Box>
+      
       <GoogleOAuthProvider clientId="604456811509-ivvuuq5qcn3h0elfhf2lijqd6bupoemv.apps.googleusercontent.com">
         {children}
        </GoogleOAuthProvider>

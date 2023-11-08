@@ -26,7 +26,13 @@
       "footer-contact-us": "BİZE ULAŞIN"
     },
     "Phone": {
-      "header-name": "Apple'la oturum açın"
+      "header-name": "Apple'la Oturum Açın",
+      "header-title": "Telefon Numarası",
+      "button-text": "Gönder",
+      "footer-terms": "ŞARTLAR",
+      "footer-plans": "PLANLAR",
+      "footer-contact-us": "BİZE ULAŞIN"
+
     },
     "SignUp": {
       "repeat-password-text": "Şifreyi tekrar girin",

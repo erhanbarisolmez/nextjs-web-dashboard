@@ -1,15 +1,14 @@
-'use client'
 import CustomButton from "@/components/CustomButton";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import TelInput from "@/components/TelInput";
 import KeyboardBackspaceOutlinedIcon from '@mui/icons-material/KeyboardBackspaceOutlined';
 import { Box } from "@mui/material";
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl';
 import Link from "next/link";
-import { useState } from "react";
+import { useState } from 'react';
 
-export default function Phone() {
+export const PhoneComponent = () => {
   const t = useTranslations('LOGIN.Phone');
 
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -22,9 +21,10 @@ export default function Phone() {
     setPhoneNumber(phoneNumber);
     console.log("handleOnSubmit" + phoneNumber);
   }
-  
-  return (
 
+  return (
+    <>
+    
     <Box sx={{
       display: "grid",
       p: 3
@@ -58,7 +58,6 @@ export default function Phone() {
     </Box>
 
 
-
-
+    </>
   )
 }

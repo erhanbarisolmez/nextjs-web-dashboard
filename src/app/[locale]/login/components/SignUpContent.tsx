@@ -4,6 +4,7 @@ import CustomTextfield from "@/components/CustomTextfield";
 import DividerWith from "@/components/DividerWith";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import SignInWithButton from "@/components/SignInWithButton";
 import { Box } from "@mui/material";
 import Checkbox from '@mui/material/Checkbox';
@@ -11,11 +12,15 @@ import { useTranslations } from "next-intl";
 export default function SignUpContent() {
   const t = useTranslations('LOGIN.SignUp');
   return (
+    
     <Box sx={{
       display:"grid",
       flexDirection:'column',
       p:3
     }}> 
+         <Box sx={{}}>
+          <LanguageSwitcher hrefEN={'/login/signup'} hrefTR={'/login/signup'} />
+        </Box>
     <Header headerName={t('header-name')} headerTitle={t('header-title')} />
      {/* Social Sign Button */}
      <SignInWithButton googleText={t('sign-in-with-google')} appleText={t('sign-in-with-apple')}/>

@@ -4,6 +4,7 @@ import CustomTextfield from '@/components/CustomTextfield';
 import DividerWith from '@/components/DividerWith';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 import SignInWithButton from '@/components/SignInWithButton';
 import { Box, Link } from "@mui/material";
 import { useTranslations } from 'next-intl';
@@ -18,6 +19,9 @@ export default function LoginPage() {
             flexDirection:'column',
             p:3
          }}> 
+          <Box sx={{}}>
+          <LanguageSwitcher hrefEN={'/login'} hrefTR={'/login'} />
+          </Box>
           {/* Header */}
           <Header  headerName={t('header-name')} headerTitle={t('header-title')}/>
           
