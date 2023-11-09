@@ -1,5 +1,4 @@
 'use client'
-import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { Box } from '@mui/material';
 import { notFound } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -41,9 +40,7 @@ export default function DashboardLayout({ children, params:{locale}}: LayoutProp
         color:'black'
        }}
       >
-          <Box sx={{}}>
-          <LanguageSwitcher hrefEN={'/dashboard'} hrefTR={'/dashboard'} />
-        </Box>
+
         <div>{children}</div>
 
 

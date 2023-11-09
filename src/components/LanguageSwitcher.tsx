@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import Link from 'next-intl/link';
 
 interface LanguageSwitcherProps {
-  hrefEN: any;
+  hrefEN: string;
   hrefTR: string;
 }
 const LanguageSwitcher = (props: LanguageSwitcherProps) => {
@@ -19,7 +19,7 @@ const LanguageSwitcher = (props: LanguageSwitcherProps) => {
         zIndex: 9999, // Adjust as needed
       }}
     >
-      <Link href={props.hrefEN} locale="en">
+      <Link passHref href={props.hrefEN} locale="en">
 
         <Typography variant='subtitle1' >
           EN
@@ -30,7 +30,7 @@ const LanguageSwitcher = (props: LanguageSwitcherProps) => {
         |
       </Typography>
 
-      <Link href={props.hrefTR} locale="tr">
+      <Link passHref href={props.hrefTR} locale="tr">
 
         <Typography variant='subtitle1'>
           TR

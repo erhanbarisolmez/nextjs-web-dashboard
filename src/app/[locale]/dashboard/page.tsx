@@ -1,4 +1,5 @@
 
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";
 
@@ -10,6 +11,9 @@ export default function Dashboard(props : DashboardProps) {
   return (
     <div>
     <Box>
+    <Box sx={{}}>
+          <LanguageSwitcher hrefEN={'/dashboard'} hrefTR={'/dashboard'} />
+        </Box>
       <Typography variant="h4" sx={{ color:'purple'}}>
           Dashboard Page
       </Typography> 
