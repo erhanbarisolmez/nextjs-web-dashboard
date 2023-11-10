@@ -1,23 +1,22 @@
 import AdvertSpace from "@/components/AdvertSpace";
 import { Box } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 interface LeftContentProps{
-  test: string;
+  children: React.ReactNode
 }
-export default function LeftContent() {
-
+export default function LeftContent(props: LeftContentProps) {
+  const t = useTranslations('LOGIN.LeftContent');
   return (
-    <>
-      {/* Content */}
+    
       <Box sx={{
-            display:"grid",
-            flexDirection:'column',
-            p:3
-          }}> 
-        <AdvertSpace />
-       </Box>
-  
-        </>
+        display: "grid",
+        flexDirection: 'column',
+        p: 3
+      }}>
+        {/* Content */}
+        <AdvertSpace headerName={t("header-name")} />
+      </Box>
 
   )
 }

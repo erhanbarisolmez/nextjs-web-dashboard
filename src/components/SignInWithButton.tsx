@@ -57,14 +57,15 @@ export default function SignInWithButton(props: SignInWithButtonProps) {
     <Box sx={{
       display:'flex',
       flexDirection:{xs:'column',md:'row'},
+
     }}>
      
-      <Button variant={variant} onClick={() => signIn()} color={color} startIcon={<GoogleIcon />} size={size}  sx={{ mr: { xs: 0, md: 2 }, mb: { xs: 2, md: 0 } }}>
+      <Button variant={variant} onClick={() => signIn()} color={color} startIcon={<GoogleIcon />} size={size}  sx={{ mr: { xs: 0, md: 1 }, mb: { xs: 2, md: 0 } }}>
       {googleText}
       </Button>
   
       <Link href={'/login/phone'} >
-      <Button variant={variant}  color={color} startIcon={<AppleIcon />} size={size} fullWidth sx={{ ml: { xs: 0, md: 0 }, mt: { xs: 2, md: 0 } }}>
+      <Button variant={variant}  color={color} startIcon={<AppleIcon />} size={size} fullWidth sx={{ ml: { xs: 0, md: 1 }, mt: { xs: 2, md: 0 } }}>
       
         {appleText}
        

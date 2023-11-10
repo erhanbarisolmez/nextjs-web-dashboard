@@ -6,6 +6,8 @@ import React, { useEffect, useState } from "react";
 import RootLayout from "../layout";
 import LeftContent from "./components/LeftContent";
  
+import AdvertSpace from "@/components/AdvertSpace";
+import { IntlProvider, useTranslations } from "next-intl";
 import { useRouter } from 'next-intl/client';
 
 
@@ -17,7 +19,7 @@ interface LayoutProps {
 }
 const locales = ['en', 'tr'];
 export default function LoginLayout({ children, params:{locale}}: LayoutProps) {
-   
+  const t = useTranslations('LOGIN.LeftContent');
     const router = useRouter();
     // Validate that the incoming `locale` parameter is valid
     const isValidLocale = locales.some((cur) => cur === locale);
@@ -31,7 +33,9 @@ export default function LoginLayout({ children, params:{locale}}: LayoutProps) {
   if (!showChild) {
     return null
   }
+  
   return (
+    <IntlProvider locale={locale}>
     <RootLayout params={{
       locale: locale
     }}>
@@ -39,13 +43,16 @@ export default function LoginLayout({ children, params:{locale}}: LayoutProps) {
       <body>
       <Grid container>
       <Box
+      
        sx={{
-        display: "flex",
-        gridTemplateColumns:'repeat(1,1fr)',
-        width:"1",
-        height:'100vh',
-        backgroundColor:'gray',
-        justifyContent:'center'
+        display: 'flex',
+        flexDirection: 'row',
+        gridTemplateColumns: 'repeat(1, 1fr)',
+        width: "100%",
+        height: '100vh', // Set to 100% of the viewport height
+        justifyContent: 'center',
+        alignContent: 'space-around',
+      
        }}
       >
           <Box
@@ -60,7 +67,10 @@ export default function LoginLayout({ children, params:{locale}}: LayoutProps) {
           }}
         >
         
-       <LeftContent />
+       <LeftContent  >
+   
+        <AdvertSpace headerName={t("header-name")}  />
+       </LeftContent>
          
         </Box>
      
@@ -70,7 +80,7 @@ export default function LoginLayout({ children, params:{locale}}: LayoutProps) {
             backgroundColor:'#3370a4',
             width:'40%',
             justifyContent:'center',
-            alignItems:'center'
+            alignItems:'center',
           }}
         >
       
@@ -84,5 +94,6 @@ export default function LoginLayout({ children, params:{locale}}: LayoutProps) {
       </body>
    </html>
    </RootLayout>
+   </IntlProvider>
   )
 }

@@ -1,3 +1,4 @@
+
 import CustomButton from '@/components/CustomButton';
 import CustomLink from '@/components/CustomLink';
 import CustomTextfield from '@/components/CustomTextfield';
@@ -26,7 +27,7 @@ export default function LoginPage() {
           <Header  headerName={t('header-name')} headerTitle={t('header-title')}/>
           
           {/* Social Sign Button */}
-          <SignInWithButton googleText={t('sign-in-with-google')} appleText={t('sign-in-with-apple')}/>
+          <SignInWithButton size='medium'  googleText={t('sign-in-with-google')} appleText={t('sign-in-with-apple')}/>
 
         {/* Divider*/}
          <Box sx={{
@@ -81,7 +82,9 @@ export default function LoginPage() {
         
           </Box>
          {/* Footer */}
+  
           <Footer terms={t('footer-terms')} plans={t('footer-plans')} contactUs={t('footer-contact-us')} />
+          
        </Box>
    
 

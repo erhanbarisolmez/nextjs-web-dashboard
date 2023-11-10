@@ -7,7 +7,22 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import KeyboardBackspaceOutlinedIcon from '@mui/icons-material/KeyboardBackspaceOutlined';
 import { Box, Link, TextField, Typography } from "@mui/material";
 
-export const TwoFactorVerificationComponent = () => {
+
+interface TwoFactorVerificationProps {
+  headerName: string;
+  headerTitle: string;
+  securityCode: string;
+  buttonTitle: string;
+  customLinkText: string;
+  customButtonBoldLink:string;
+  customButtonBoldLink2:string;
+  customLinkText2:string;
+  terms: string;
+  plans: string;
+  contactUs: string;
+}
+
+export const TwoFactorVerificationComponent = (props: TwoFactorVerificationProps) => {
   const submitLink = `phone/twoFactorVerification?phoneNumber=`;
 
   return (
@@ -15,14 +30,17 @@ export const TwoFactorVerificationComponent = () => {
     <Box sx={{
       display: "flex",
       flexDirection: 'column',
-      width: '60%'
+      width: '60%',
+      height: '100vh',
+      justifyContent:'center',
+      justifyItems:'center',
     }}>
       <Box sx={{}}>
-        <LanguageSwitcher hrefEN={'/login/'+submitLink} hrefTR={'/login/'+submitLink} />
+        <LanguageSwitcher hrefEN={'/login/' + submitLink} hrefTR={'/login/' + submitLink} />
       </Box>
       <Header
-        headerName={"Two Factor Verification"}
-        headerTitle={"Enter the verification code we sent to"}
+        headerName={props.headerName}
+        headerTitle={props.headerTitle}
       />
       <Typography variant="body1"
         sx={{
@@ -46,7 +64,7 @@ export const TwoFactorVerificationComponent = () => {
           mt: 2
         }}>
 
-        <b>Type your 6 digit security code</b>
+        <b>{props.securityCode}</b>
       </Typography>
       <Box sx={{
         display: 'flex',
@@ -59,8 +77,8 @@ export const TwoFactorVerificationComponent = () => {
           sx={{
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'center', // Bu, altı metin alanını yatay olarak ortalar
-            mt: 2, // İhtiyacınıza bağlı olarak aralığı ayarlayabilirsiniz
+            justifyContent: 'center',
+            mt: 2,
           }}
         >
           {[1, 2, 3, 4, 5, 6].map((index) => (
@@ -76,7 +94,7 @@ export const TwoFactorVerificationComponent = () => {
 
       </Box>
       <Box sx={{ mt: 3 }}>
-        <CustomButton buttonTitle={"Submit"} />
+        <CustomButton buttonTitle={props.buttonTitle} />
       </Box>
       <Box sx={{
         display: 'flex',
@@ -84,13 +102,13 @@ export const TwoFactorVerificationComponent = () => {
         mt: 3,
         justifyContent: 'center'
       }}>
-        <CustomLink text={"Didn't get the code?"} link={"Resend"} boldLinkText="Resend" />
-        <Box sx={{ ml: 1 }}>
-          <CustomLink text={"or"} link={"Resend"} boldLinkText="Call Us " />
+        <CustomLink text={props.customLinkText} link={"Resend"} boldLinkText={props.customButtonBoldLink} />
+        <Box sx={{ ml: 0.5 }}>
+          <CustomLink text={props.customLinkText2} link={"CallUs"} boldLinkText={props.customButtonBoldLink2} />
         </Box>
       </Box>
 
-      <Footer />
+      <Footer terms={props.terms} plans={props.plans} contactUs={props.contactUs}/>
     </Box>
 
   )

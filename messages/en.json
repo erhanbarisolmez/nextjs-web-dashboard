@@ -36,8 +36,8 @@
     "SignUp": {
       "header-name": "Sign Up",
       "header-title": "Create Account",
-      "sign-in-with-google": "sign-in-with-google",
-      "sign-in-with-apple": "sign-in-with-apple",
+      "sign-in-with-google": "sign in with google",
+      "sign-in-with-apple": "sign in with apple",
       "or-with-email": "Or with Email",
       "email-text": "Email",
       "password-test": "Password",
@@ -50,6 +50,22 @@
       "footer-terms": "TERMS",
       "footer-plans": "PLANS",
       "footer-contact-us": "CONTACT US"
+    },
+    "TwoFactorVerification": {
+      "header-name": "Two Factor Verification",
+      "header-title": "Enter the verification code we sent to",
+      "security-code": "Type your 6 digit security code",
+      "custom-button-title": "Submit",
+      "customLinkText": "Didn't get the code?",
+      "bold-link-text": "Resend",
+      "bold-link-text2": "Call Us",
+      "custom-link-text2": "or",
+      "footer-terms": "TERMS",
+      "footer-plans": "PLANS",
+      "footer-contact-us": "CONTACT US"
+    },
+    "LeftContent": {
+      "header-name": "Fast, Efficient and Productive"
     }
   },
   "DASHBOARD": {

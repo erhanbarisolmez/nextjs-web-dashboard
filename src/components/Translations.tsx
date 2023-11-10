@@ -1,19 +1,26 @@
-
-import Header from '@/components/Header';
+'use client'
+import { Box } from "@mui/material";
 import { useTranslations } from "next-intl";
+import AdvertSpace from "./AdvertSpace";
 
 interface TranslationsProps{
-  children: React.ReactNode;
-  setTranslations: string;
+  headerName: React.ReactNode
 }
 export const Translations = (props : TranslationsProps) => {
-  const {children, setTranslations} = props;
-  const t = useTranslations(setTranslations); // 'product' 'LOGIN.SignUp' dil dosyasının anahtarını buraya ekleyin
-
+  const t = useTranslations('LOGIN.LeftContent');
   return (
     <>
-    <Header  headerName={t('header-name') }headerTitle={"header-title"}/>
+      {/* Content */}
+      <Box sx={{
+            display:"grid",
+            flexDirection:'column',
+            p:3
+          }}> 
+        <AdvertSpace headerName={t('header-name')} />
+     
+       </Box>
+  
+        </>
 
-    </>
   )
 }

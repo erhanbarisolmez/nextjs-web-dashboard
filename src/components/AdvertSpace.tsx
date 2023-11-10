@@ -1,4 +1,6 @@
+'use client'
 import { Box, Typography } from '@mui/material';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
@@ -9,7 +11,13 @@ const images = [
   'https://cdn.pixabay.com/photo/2019/04/26/07/14/store-4156934_1280.png',
 ];
 
-export default function AdvertSpace() {
+interface AdvertSpaceProps{
+  headerName?: string;
+}
+
+export default function AdvertSpace(props: AdvertSpaceProps) {
+  const t = useTranslations('LOGIN.LeftContent');
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -42,7 +50,7 @@ export default function AdvertSpace() {
    
       <Box sx={{mt:'10px', textAlign:'center', alignContent:'center', alignItems:'center'}}>
         <Typography variant='h5'>
-         <b>Fast, Efficient and Productive</b>
+         <b>{props.headerName}</b>
         </Typography>
 
         <Typography variant='body2' paragraph={true}   sx={{maxWidth:500, mt:1}}>

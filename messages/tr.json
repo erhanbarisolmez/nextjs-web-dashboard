@@ -32,7 +32,6 @@
       "footer-terms": "ŞARTLAR",
       "footer-plans": "PLANLAR",
       "footer-contact-us": "BİZE ULAŞIN"
-
     },
     "SignUp": {
       "repeat-password-text": "Şifreyi tekrar girin",
@@ -51,6 +50,22 @@
       "footer-terms": "ŞARTLAR",
       "footer-plans": "PLANLAR",
       "footer-contact-us": "BİZE ULAŞIN"
+    },
+    "TwoFactorVerification": {
+      "header-name": "İki Faktörlü Doğrulama",
+      "header-title": "Gönderdiğimiz doğrulama kodunu girin",
+      "security-code": "6 haneli güvenlik kodunuzu yazın",
+      "custom-button-title": "Göndermek",
+      "customLinkText": "Kodu almadınız mı?",
+      "bold-link-text": "Yeniden gönder",
+      "bold-link-text2": "Bizi Arayın",
+      "custom-link-text2": "veya",
+      "footer-terms": "ŞARTLAR",
+      "footer-plans": "PLANLAR",
+      "footer-contact-us": "BİZE ULAŞIN"
+    },
+    "LeftContent": {
+      "header-name": "Hızlı, Verimli ve Üretken"
     }
   },
   "DASHBOARD": {

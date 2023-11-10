@@ -3,7 +3,7 @@ import Link from 'next-intl/link';
 interface CustomLinkProps{
   text: string;
   variant?: "h1" |"h2" | "h3" | "h4"| "subtitle1" | "subtitle2";
-  link:string ;
+  link:string;
   linkText?: string;
   boldLinkText?: string;
 
